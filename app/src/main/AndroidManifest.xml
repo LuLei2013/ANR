@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ll.anr.anr">
+
+    <uses-permission android:name="com.ll.anr.anr.permission.TEST_ANR" />
+
+
+    <permission
+        android:name="com.ll.anr.anr.permission.TEST_ANR"
+        android:protectionLevel="normal" />
+
+    <application
+        android:name=".Application"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".TestServiceActivity" />
+        <activity android:name=".TestBroadcastActivity" />
+        <activity android:name=".TestProviderActivity" />
+        <activity android:name=".TestInputEventActivity" />
+
+
+        <service android:name=".service.MyService" />
+
+
+        <receiver android:name=".receiver.StaticReceiver" />
+
+
+        <provider
+            android:name=".provider.MainContentProvider"
+            android:authorities="com.ll.anr.anr.provider.main"
+            android:process=":main" />
+
+        <provider
+            android:name=".provider.BackGroundContentProvider"
+            android:authorities="com.ll.anr.anr.provider.background"
+            android:process=":background" />
+    </application>
+
+</manifest>
