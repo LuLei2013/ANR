@@ -12,6 +12,7 @@ import android.widget.ListView;
 public class MainActivity extends ListActivity {
 
     private final static String[] TARGET_ACTIVITIES = {
+            TestActivity.class.getSimpleName(),
             TestServiceActivity.class.getSimpleName(),
             TestBroadcastActivity.class.getSimpleName(),
             TestProviderActivity.class.getSimpleName(),

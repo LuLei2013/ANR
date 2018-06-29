@@ -26,6 +26,7 @@
         </activity>
 
         <activity android:name=".TestServiceActivity" />
+        <activity android:name=".TestActivity" />
         <activity android:name=".TestBroadcastActivity" />
         <activity android:name=".TestProviderActivity" />
         <activity android:name=".TestInputEventActivity" />

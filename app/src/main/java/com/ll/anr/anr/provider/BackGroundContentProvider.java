@@ -16,7 +16,7 @@ public class BackGroundContentProvider extends ContentProvider {
     public boolean onCreate() {
         Log.e("Ruby", "BackGroundContentProvider  onCreate start");
         try {
-            Thread.sleep(10 * THREE_SECOND);
+            Thread.sleep(THREE_SECOND);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
